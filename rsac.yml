@@ -6,3 +6,18 @@ repository:
   allow_auto_merge: true
   delete_branch_on_merge: true
   allow_update_branch: true
+
+branch-protection:
+  main:
+    required_status_checks:
+      strict: true
+      contexts:
+        - Ghost Lint
+        - Version Integrity
+    enforce_admins: true
+    required_pull_request_reviews:
+      required_approving_review_count: 0
+    restrictions: null
+    allow_deletions: false
+    lock_branch: false
+    allow_force_pushes: false
