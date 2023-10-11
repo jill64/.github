@@ -11,9 +11,7 @@ branch-protection:
   main:
     required_status_checks:
       strict: true
-      contexts:
-        - Ghost Lint
-        - Version Integrity
+      contexts: []
       checks: 
         - context: Ghost Lint
           app_id: 401223
