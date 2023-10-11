@@ -19,5 +19,4 @@ branch-protection:
       required_approving_review_count: 0
     restrictions: null
     allow_deletions: false
-    lock_branch: false
     allow_force_pushes: false
