@@ -13,6 +13,7 @@ branch-protection:
       strict: true
       contexts: 
         - Ghost Lint
+        - Ghost Merge
         - Version Integrity
         - Version Bump
       # checks: 
