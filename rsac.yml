@@ -14,6 +14,7 @@ branch-protection:
       contexts: 
         - Ghost Lint
         - Version Integrity
+        - Version Bump
       # checks: 
       #   - context: Ghost Lint
       #     app_id: 401223
