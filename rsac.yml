@@ -13,6 +13,7 @@ branch-protection:
       strict: true
       contexts: 
         - Ghost Lint
+        - Ghost Build
         - Version Integrity
       # checks: 
       #   - context: Ghost Lint
