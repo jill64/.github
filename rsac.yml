@@ -16,11 +16,15 @@ branch-protection:
         - Ghost Build
         - Ghost Test
         - Version Integrity
-      # checks: 
-      #   - context: Ghost Lint
-      #     app_id: 401223
-      #   - context: Version Integrity
-      #     app_id: 394746
+      checks: 
+        - context: Ghost Lint
+          app_id: 401223
+        - context: Ghost Build
+          app_id: 408130
+        - context: Ghost Test
+          app_id: 408134
+        - context: Version Integrity
+          app_id: 394746
     enforce_admins: true
     required_pull_request_reviews:
       required_approving_review_count: 0
