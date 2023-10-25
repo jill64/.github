@@ -1,11 +1,6 @@
-name: Coverage
+name: Run Vitest
 
-on:
-  workflow_call:
-    inputs:
-      test-command:
-        type: string
-        default: npm run test
+on: workflow_call
 
 jobs:
   coverage:
@@ -25,8 +20,11 @@ jobs:
           version: latest
           run_install: true
 
+      - name: Add Converage Dependencies
+        run: pnpm i -D @vitest/coverage-v8
+
       - name: Test
-        run: ${{ inputs.test-command }}
+        run: pnpm exec vitest run --coverage
 
       - name: Upload Coverage
         uses: codecov/codecov-action@eaaf4bedf32dbdc6b720b63067d99c4d77d6047d # v3
