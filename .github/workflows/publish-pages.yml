@@ -9,11 +9,8 @@ on:
       output-directory:
         type: string
         default: ./build
-      concurrency:
-        type: string
-        default: pages
 
-concurrency: ${{ inputs.concurrency }}
+concurrency: publish-pages
 
 jobs:
   publish-pages:
