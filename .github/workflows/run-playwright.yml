@@ -7,7 +7,7 @@ on:
         type: string
       test-command:
         type: string
-        default: playwright test
+        default: npx playwright test
 
 jobs:
   run-playwright:
