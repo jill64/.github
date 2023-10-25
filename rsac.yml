@@ -38,4 +38,3 @@ branch-protection:
 default-workflow-permissions:
   default_workflow_permissions: read
   can_approve_pull_request_reviews: false
-
