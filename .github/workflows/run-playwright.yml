@@ -5,6 +5,9 @@ on:
     inputs:
       pre-test:
         type: string
+      test-command:
+        type: string
+        default: playwright test
 
 jobs:
   run-playwright:
@@ -32,7 +35,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Playwright
-        run: npx playwright test
+        run: ${{ inputs.test-command }}
 
       - name: Uplaod Artifact
         uses: actions/upload-artifact@a8a3f3ad30e3422c9c7b888a15615d19a852ae32 # v3
