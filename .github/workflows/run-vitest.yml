@@ -3,7 +3,7 @@ name: Run Vitest
 on: workflow_call
 
 jobs:
-  coverage:
+  run-vitest:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
