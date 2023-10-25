@@ -16,6 +16,7 @@ branch-protection:
         - Ghost Build
         - Ghost Test
         - Ghost Docs
+        - Ghost Format
         - Version Integrity
       # checks:
       #   - context: Ghost Lint
