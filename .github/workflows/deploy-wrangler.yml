@@ -1,6 +1,6 @@
 name: Deploy Wrangler
 
-on: 
+on:
   workflow_call:
     inputs:
       node-version:
@@ -35,7 +35,7 @@ jobs:
           -f ref=${{ github.ref_name }} \
           -f cmd=${{ inputs.deploy-command }} \
           -f node=${{ inputs.node-version }}
-  
+
   deploy-wrangler:
     if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
