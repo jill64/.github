@@ -34,6 +34,7 @@ branch-protection:
     allow_deletions: false
     lock_branch: false
     allow_force_pushes: false
+    
 
 default-workflow-permissions:
   default_workflow_permissions: read
