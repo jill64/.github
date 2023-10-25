@@ -11,7 +11,7 @@ Common account settings
 ## Reusable Workflows
 
 ```yml
-name: Test
+name: CI
 
 on: push
 
