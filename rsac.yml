@@ -14,7 +14,6 @@ branch-protection:
       contexts:
         - Ghost Lint
         - Ghost Build
-        - Ghost Docs
         - Ghost Format
         - Version Integrity
     enforce_admins: true
