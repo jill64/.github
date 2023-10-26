@@ -35,6 +35,8 @@ jobs:
           -f ref=${{ github.ref_name }} \
           -f cmd=${{ inputs.deploy-command }} \
           -f node=${{ inputs.node-version }}
+        env:
+          GH_TOKEN: ${{ github.token }}
 
   deploy-wrangler:
     if: github.event_name == 'workflow_dispatch'
@@ -59,3 +61,5 @@ jobs:
 
       - name: Deploy
         run: ${{ inputs.cmd }}
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
