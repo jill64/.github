@@ -24,8 +24,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "keywords": [
-  ],
+  "keywords": [],
   "scripts": {
     "build": "tsc && npx publint",
     "prepack": "npm run build",
