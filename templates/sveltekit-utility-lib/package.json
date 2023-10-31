@@ -1,0 +1,49 @@
+{
+  "name": "package-name",
+  "version": "0.0.0",
+  "description": "package-description",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "author": "jill64 <intents.turrets0h@icloud.com> (https://github.com/jill64)",
+  "bugs": "https://github.com/jill64/package-name/issues",
+  "homepage": "https://github.com/jill64/package-name#readme",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jill64/package-name.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [],
+  "scripts": {
+    "dev": "cd demo && npm run dev",
+    "build": "npm run build:lib && npm run build:demo && npx publint",
+    "build:lib": "tsc",
+    "build:demo": "cd demo && npm run build",
+    "preview": "npm run build:lib && cd demo && npm run preview",
+    "test": "playwright test",
+    "prepack": "npm run build",
+    "format": "npm run format:lib && npm run format:demo",
+    "format:lib": "npx prettier --write .",
+    "format:demo": "cd demo && npm run format",
+    "lint": "npm run lint:lib && npm run lint:demo",
+    "lint:lib": "npx eslint .",
+    "lint:demo": "cd demo && npm run lint"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.39.0",
+    "@typescript-eslint/eslint-plugin": "6.9.1",
+    "@typescript-eslint/parser": "6.9.1",
+    "eslint-plugin-deprecation": "2.0.0",
+    "typescript": "5.2.2"
+  }
+}
