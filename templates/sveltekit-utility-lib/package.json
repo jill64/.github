@@ -30,7 +30,8 @@
     "build:lib": "tsc",
     "build:demo": "cd demo && npm run build",
     "preview": "npm run build:lib && cd demo && npm run preview",
-    "test": "playwright test",
+    "test": "vitest",
+    "test:e2e": "playwright test",
     "prepack": "npm run build",
     "format": "npm run format:lib && npm run format:demo",
     "format:lib": "npx prettier --write .",
@@ -44,6 +45,7 @@
     "@typescript-eslint/eslint-plugin": "6.9.1",
     "@typescript-eslint/parser": "6.9.1",
     "eslint-plugin-deprecation": "2.0.0",
-    "typescript": "5.2.2"
+    "typescript": "5.2.2",
+    "vitest": "0.34.6"
   }
 }
