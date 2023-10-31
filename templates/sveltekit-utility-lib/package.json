@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "package-description",
   "main": "dist/index.js",
+  "type": "module",
   "license": "MIT",
   "author": "jill64 <intents.turrets0h@icloud.com> (https://github.com/jill64)",
   "bugs": "https://github.com/jill64/package-name/issues",
