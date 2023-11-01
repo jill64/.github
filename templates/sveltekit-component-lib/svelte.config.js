@@ -5,12 +5,7 @@ import { vitePreprocess } from '@sveltejs/kit/vite'
 const config = {
   preprocess: vitePreprocess(),
   kit: {
-    adapter: adapter({
-      fallback: 'index.html'
-    }),
-    paths: {
-      base: '/package-name'
-    }
+    adapter: adapter()
   }
 }
 
