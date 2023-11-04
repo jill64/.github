@@ -36,7 +36,7 @@ jobs:
 
       - name: Run Playwright
         run: ${{ inputs.test-command }}
-        env: 
+        env:
           PUBLIC_SENTRY_DSN: ''
 
       - name: Uplaod Artifact
