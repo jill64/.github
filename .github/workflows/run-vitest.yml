@@ -4,6 +4,8 @@ on:
   workflow_call:
     inputs:
       monorepo:
+        type: string
+        default: ''
 
 jobs:
   run-vitest:
