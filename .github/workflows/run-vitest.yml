@@ -1,6 +1,9 @@
 name: Run Vitest
 
-on: workflow_call
+on: 
+  workflow_call:
+    inputs:
+      monorepo:
 
 jobs:
   run-vitest:
@@ -21,7 +24,7 @@ jobs:
           run_install: true
 
       - name: Add Converage Dependencies
-        run: pnpm i -D @vitest/coverage-v8
+        run: pnpm i -D @vitest/coverage-v8 ${{ inputs.monorepo && '-w' || '' }}
 
       - name: Test
         run: pnpm exec vitest run --coverage
