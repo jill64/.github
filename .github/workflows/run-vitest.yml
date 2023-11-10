@@ -1,6 +1,6 @@
 name: Run Vitest
 
-on: 
+on:
   workflow_call:
     inputs:
       monorepo:
