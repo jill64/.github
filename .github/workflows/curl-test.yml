@@ -1,0 +1,17 @@
+name: cURL Test
+
+on:
+  workflow_call:
+    inputs:
+      url:
+        type: string
+      to-be:
+        type: number
+        default: 200
+
+jobs:
+  curl-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test
+        run: test $(curl ${{ inputs.url }} -o /dev/null -w '%{http_code}\n' -s) = ${{ inputs.to-be }}
