@@ -1,5 +1,6 @@
 {
   "scripts": {
-    "format": "npx prettier --write ."
+    "lint": "npx prettier --check .",
+    "format": "npx prettier -w ."
   }
 }
