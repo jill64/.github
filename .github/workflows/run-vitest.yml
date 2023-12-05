@@ -1,11 +1,6 @@
 name: Run Vitest
 
-on:
-  workflow_call:
-    inputs:
-      monorepo:
-        type: string
-        default: ''
+on: workflow_call
 
 jobs:
   run-vitest:
@@ -26,7 +21,7 @@ jobs:
           run_install: true
 
       - name: Add Converage Dependencies
-        run: pnpm i -D @vitest/coverage-v8 ${{ inputs.monorepo && '-w' || '' }}
+        run: pnpm i -D @vitest/coverage-v8@$(cat package.json | jq -r .devDependencies.vitest) $(if [ -f "pnpm-workspace.yaml" ]; then echo "-w"; else echo ; fi)
 
       - name: Test
         run: pnpm exec vitest run --coverage
