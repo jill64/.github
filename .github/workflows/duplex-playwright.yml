@@ -1,0 +1,25 @@
+name: Duplex Playwright
+
+on:
+  workflow_call:
+    inputs:
+      pre-test:
+        type: string
+      test-command:
+        type: string
+      hosting-provider:
+        type: string
+
+jobs:
+  local:
+    uses: ./.github/workflows/run-playwright.yml
+    with:
+      pre-test: ${{ inputs.pre-test }}
+      test-command: ${{ inputs.test-command }}
+
+  remote:
+    uses: ./.github/workflows/run-playwright.yml
+    with:
+      pre-test: ${{ inputs.pre-test }}
+      test-command: ${{ inputs.test-command }}
+      hosting-provider: ${{ inputs.hosting-provider }}
