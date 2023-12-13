@@ -1,6 +1,6 @@
 name: Run Vitest
 
-on: 
+on:
   workflow_call:
     inputs:
       pre-test:
@@ -31,7 +31,7 @@ jobs:
       - name: Pre Test
         if: inputs.pre-test
         run: ${{ inputs.pre-test }}
-      
+
       - name: Test
         run: pnpm exec vitest run --coverage
 
