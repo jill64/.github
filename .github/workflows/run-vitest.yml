@@ -1,6 +1,10 @@
 name: Run Vitest
 
-on: workflow_call
+on: 
+  workflow_call:
+    inputs:
+      pre-test:
+        type: string
 
 jobs:
   run-vitest:
@@ -24,6 +28,10 @@ jobs:
       - name: Add Converage Dependencies
         run: pnpm i -D @vitest/coverage-v8@$(cat package.json | jq -r .devDependencies.vitest) $(if [ -f "pnpm-workspace.yaml" ]; then echo "-w"; else echo ; fi)
 
+      - name: Pre Test
+        if: inputs.pre-test
+        run: ${{ inputs.pre-test }}
+      
       - name: Test
         run: pnpm exec vitest run --coverage
 
