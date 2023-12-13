@@ -2,7 +2,7 @@
 
 # .github
 
-[![publish-pages.yml](https://github.com/jill64/.github/actions/workflows/publish-pages.yml/badge.svg)](https://github.com/jill64/.github/actions/workflows/publish-pages.yml) [![run-vitest.yml](https://github.com/jill64/.github/actions/workflows/run-vitest.yml/badge.svg)](https://github.com/jill64/.github/actions/workflows/run-vitest.yml)
+<!----- BEGIN GHOST DOCS BADGES -----><a href="https://github.com/jill64/.github/actions/workflows/publish-pages.yml"><img src="https://github.com/jill64/.github/actions/workflows/publish-pages.yml/badge.svg" alt="publish-pages.yml" /></a> <a href="https://github.com/jill64/.github/actions/workflows/run-vitest.yml"><img src="https://github.com/jill64/.github/actions/workflows/run-vitest.yml/badge.svg" alt="run-vitest.yml" /></a><!----- END GHOST DOCS BADGES ----->
 
 🛠️ Common account settings
 
