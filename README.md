@@ -18,9 +18,4 @@ on: push
 jobs:
   test:
     uses: jill64/.github/.github/workflows/run-vitest.yml@main
-  test-e2e:
-    uses: jill64/.github/.github/workflows/run-playwright.yml@main
-    with:
-      pre-test: npm run build
-      test-command: npx playwright test
 ```
