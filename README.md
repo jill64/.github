@@ -19,3 +19,10 @@ jobs:
   test:
     uses: jill64/.github/.github/workflows/run-vitest.yml@main
 ```
+
+## Global Hooks
+
+```sh
+cp ~/.github/.gitconfig ~/.gitconfig
+chmod a+x ~/.github/hooks/[name]
+```
