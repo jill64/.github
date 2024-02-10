@@ -1,3 +1,5 @@
 #!/bin/sh
 
-npm run format
+if [ -e package.json ]; then
+  npm run format
+fi

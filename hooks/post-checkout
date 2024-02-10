@@ -1,3 +1,5 @@
 #!/bin/sh
 
-pnpm i
+if [ -e package.json ]; then
+  pnpm i
+fi
