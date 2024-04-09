@@ -36,7 +36,7 @@ jobs:
         run: pnpm exec vitest run --coverage
 
       - name: Upload Coverage
-        uses: codecov/codecov-action@7afa10ed9b269c561c2336fd862446844e0cbf71 # v4
+        uses: codecov/codecov-action@84508663e988701840491b86de86b666e8a86bed # v4
         with:
           files: ./coverage/coverage-final.json
 
