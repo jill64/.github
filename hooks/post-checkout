@@ -1,5 +1,5 @@
 #!/bin/sh
 
 if [ -e package.json ]; then
-  pnpm i
+  bun i
 fi
