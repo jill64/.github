@@ -1,5 +1,5 @@
 #!/bin/sh
 
 if [ -e package.json ]; then
-  bun update --latest && bun i
+  bun update --latest
 fi
